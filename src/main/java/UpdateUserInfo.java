@@ -31,7 +31,7 @@ public class UpdateUserInfo {
                 .header("Content-type", "application/json")
                 .header("Authorization", accessToken)
                 .body(newUpdateInfo)
-                .patch(Constants.USER_INFO_ENDPOINT);
+                .patch(Constants.USER_INFO_API);
         return this;
     }
 
@@ -42,7 +42,7 @@ public class UpdateUserInfo {
         response = given()
                 .header("Content-type", "application/json")
                 .body(newUpdateInfo)
-                .patch(Constants.USER_INFO_ENDPOINT);
+                .patch(Constants.USER_INFO_API);
         return this;
     }
 

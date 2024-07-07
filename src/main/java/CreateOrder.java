@@ -23,7 +23,7 @@ public class CreateOrder {
                 .header("Content-type", "application/json")
                 .header("Authorization", accessToken)
                 .body(newCreateOrder)
-                .post(Constants.CREATE_ORDER_ENDPOINT);
+                .post(Constants.CREATE_ORDER_API);
         return this;
     }
 
@@ -34,7 +34,7 @@ public class CreateOrder {
         response = given()
                 .header("Content-type", "application/json")
                 .body(newCreateOrder)
-                .post(Constants.CREATE_ORDER_ENDPOINT);
+                .post(Constants.CREATE_ORDER_API);
         return this;
     }
     @Step("Проверка статус-кода")

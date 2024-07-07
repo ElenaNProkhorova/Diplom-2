@@ -14,14 +14,14 @@ public class GetOrders {
     public Response getOrderRequest(String accessToken) {
         return given()
                 .header("Authorization", accessToken)
-                .get(Constants.GET_ORDER_ENDPOINT);
+                .get(Constants.GET_ORDER_API);
     }
 
     @Step("Отправка GET запроса для получения списка заказов")
     //запрос без авторизации (accessToken отсутствует)
     public Response getOrderRequest() {
         return given()
-                .get(Constants.GET_ORDER_ENDPOINT);
+                .get(Constants.GET_ORDER_API);
     }
 
     @Step("Отправка GET запроса для получения списка заказов")
@@ -30,7 +30,7 @@ public class GetOrders {
         GetOrders getOrders = new GetOrders();
         response = given()
                 .header("Authorization", accessToken)
-                .get(Constants.GET_ORDER_ENDPOINT);
+                .get(Constants.GET_ORDER_API);
         return this;
     }
 
@@ -39,7 +39,7 @@ public class GetOrders {
     public GetOrders getOrderRequest2() {
         GetOrders getOrders = new GetOrders();
         response = given()
-                .get(Constants.GET_ORDER_ENDPOINT);
+                .get(Constants.GET_ORDER_API);
         return this;
     }
 

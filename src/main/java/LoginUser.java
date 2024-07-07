@@ -26,7 +26,7 @@ public class LoginUser {
         response = given()
                 .header("Content-type", "application/json")
                 .body(newLoginUser)
-                .post(Constants.LOGIN_USER_ENDPOINT);
+                .post(Constants.LOGIN_USER_API);
         return this;
     }
 

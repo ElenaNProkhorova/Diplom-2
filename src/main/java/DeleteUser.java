@@ -16,9 +16,9 @@ public class DeleteUser {
     public void deleteUserRequest(String accessToken) {
         Response response =  given()
                 .header("Authorization", accessToken)
-                .delete(Constants.USER_INFO_ENDPOINT);
+                .delete(Constants.USER_INFO_API);
         response.then()
                 .assertThat()
-                .statusCode(Constants.STATUS_CODE_202);
+                .statusCode(202);
     }
 }

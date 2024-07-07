@@ -7,7 +7,7 @@ public class GetIngredientsList {
     public GetIngredientsListDeserialization getIngredientListRequest(String accessToken) {
         return given()
                 .header("Authorization", accessToken)
-                .get(Constants.GET_INGREDIENT_LIST_ENDPOINT)
+                .get(Constants.GET_INGREDIENT_LIST_API)
                 .body().as(GetIngredientsListDeserialization.class);
     }
 }

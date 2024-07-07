@@ -29,7 +29,7 @@ public class CreateUser {
         response = given()
                 .header("Content-type", "application/json")
                 .body(newCreatedUser)
-                .post(Constants.CREATE_USER_ENDPOINT);
+                .post(Constants.CREATE_USER_API);
         return this;
     }
 
